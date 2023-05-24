@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
 import { JugadorComponent } from './jugador/jugador.component';
 import { JugadorListaComponent } from './jugador-lista/jugador-lista/jugador-lista.component';
 import { RouterModule } from '@angular/router';
@@ -25,7 +24,6 @@ import {PanelModule} from "primeng/panel";
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     JugadorComponent,
     JugadorListaComponent,
   ],

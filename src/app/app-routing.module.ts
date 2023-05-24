@@ -5,7 +5,7 @@ import { JugadorListaComponent } from './jugador-lista/jugador-lista/jugador-lis
 
 const routes: Routes = [
   {
-    path: 'jugador',
+    path: '',
     component: JugadorComponent
   },
   {
