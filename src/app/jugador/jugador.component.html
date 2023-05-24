@@ -1,0 +1,81 @@
+<div class="formgrid grid">
+    <div class="col-6">
+      <p-panel header="Reactive Forms">
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" class="p-fluid">
+          <div class="field">
+            <label>ID:</label>
+            <input type="number" pInputText formControlName="id"/>
+          </div>
+          <div class="field">
+            <label>Jugador:</label>
+            <input type="text" pInputText formControlName="nombre"/>
+            <small *ngIf="form.controls['nombre'].errors && form.controls['nombre'].touched">
+              Tiene errores
+            </small>
+          </div>
+          <div class="field">
+            <label>Equipo:</label>
+            <input type="text" pInputText formControlName="equipo"/>
+          </div>
+          <div class="field">
+            <label>Número de Camiseta:</label>
+            <p-inputNumber inputId="numCamiseta"
+                           formControlName="numCamiseta"
+                           [showButtons]="true"
+                           [min]="0"
+                           [step]="1"
+            ></p-inputNumber>
+          </div>
+          <div class="field">
+            <label>Número de Celular:</label>
+            <p-inputMask formControlName="numCelular" mask="999 999 9999"></p-inputMask>
+          </div>
+          <div class="field">
+            <label>Fecha de Nacimiento:</label>
+            <p-calendar inputId="fchNacimiento"
+                        formControlName="fchNacimiento"
+                        [showIcon]="true"
+            ></p-calendar>
+          </div>
+          <div class="field">
+            <label>País Origen:</label>
+            <input type="text" pInputText formControlName="paisOrigen"/>
+          </div>
+          <div class="field">
+            <label>Posición:</label>
+            <input type="text" pInputText formControlName="posicion"/>
+          </div>
+          <div class="field">
+            <label>Peso:</label>
+            <p-inputNumber inputId="peso"
+                           formControlName="peso"
+                           [showButtons]="true"
+                           [min]="0"
+                           [step]="1"
+                           suffix=" Kg"
+            ></p-inputNumber>
+          </div>
+          <div class="field">
+            <label>Altura:</label>
+            <p-inputNumber inputId="altura"
+                           formControlName="altura"
+                           [showButtons]="true"
+                           [min]="0"
+                           [step]="1"
+                           suffix=" m"
+            ></p-inputNumber>
+          </div>
+          <div class="field">
+            <label>Convocado:</label>
+            <p-inputSwitch inputId="convocado" formControlName="convocado"></p-inputSwitch>
+          </div>
+          <div class="field">
+            <button pButton type="submit" label="Guardar"></button>
+            <button pButton type="button" class="p-button-warning" label="Actualizar" (click)="actualizarJugador()"></button>
+            <button pButton type="button" class="p-button-success" label="Ver Listado" [routerLink]="['/jugador-lista']"></button>
+          </div>
+        </form>
+      </p-panel>
+    </div>
+  </div>
+  
