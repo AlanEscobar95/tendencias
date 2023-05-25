@@ -9,11 +9,7 @@ import { JugadoresService } from './jugadores.service';
 })
 
 export class JugadorComponent {
-  name: string = '';
-  age: number = 0;
-  birthdate: Date = new Date();
-  state: boolean = false;
-
+ 
   form: FormGroup;//Reactive Form
 
   constructor(private formBuilder: FormBuilder, private jugadoresService: JugadoresService) {
@@ -51,9 +47,8 @@ export class JugadorComponent {
   
 
   onSubmit() {
-    console.log(this.form);
     if (this.form.valid) {
-      alert('Guardado');
+      this.añadirJugador();
     } else {
       alert('Formulario No Valido');
     }
@@ -69,11 +64,6 @@ export class JugadorComponent {
     console.log(this.jugadoresService.jugadores);
   }
 
-  validateForm() {
-    if (this.name === '' && this.name.length <= 3) {
-
-    }
-  }
   get idField() {
     return this.form.controls['id'];
   }

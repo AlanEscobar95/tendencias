@@ -9,6 +9,10 @@ const routes: Routes = [
     component: JugadorComponent
   },
   {
+    path: 'jugador',
+    component: JugadorComponent
+  },
+  {
     path: 'jugador-lista',
     component: JugadorListaComponent
   },

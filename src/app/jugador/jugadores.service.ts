@@ -23,7 +23,7 @@ export class JugadoresService {
    this.jugadores.push(payload); 
   }
 
-  actualizarJugador(id:number,payload:any){
+  actualizarJugador(id:number, payload:any){
     const index = this.jugadores.findIndex(jugador => jugador.id === id );
     this.jugadores[index]=payload;
   }
