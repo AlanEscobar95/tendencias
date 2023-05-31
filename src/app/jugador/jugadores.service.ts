@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class JugadoresService {
   jugadores: any[] = [];
   seleccionarJugador: any = null;
+  httpClient: any;
 
   constructor() { 
     this.cargarJugadores();
@@ -34,4 +35,8 @@ export class JugadoresService {
       this.jugadores.splice(index, 1);
     }
   }
+  getAllCountries() {
+    return this.httpClient.get('http://localhost:3000/api/v1/students/catalogue');
+  }
 }
+

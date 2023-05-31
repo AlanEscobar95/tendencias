@@ -20,6 +20,7 @@ import {InputSwitchModule} from 'primeng/inputswitch';
 import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from "primeng/table";
 import {PanelModule} from "primeng/panel";
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {PanelModule} from "primeng/panel";
     InputSwitchModule,
     InputTextModule,
     PanelModule,
-    TableModule
+    TableModule,
+    HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

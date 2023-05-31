@@ -29,5 +29,16 @@ export class JugadorListaComponent {
     this.jugadoresService.borrarJugador(id);
     console.log(this.jugadoresService.jugadores);
   }
+
+  getAllCountries() {
+    console.log('1');
+    this.jugadoresService.getAllCountries().subscribe(response => {
+        console.log(response);
+      }, error => {
+        console.log(error);
+      }
+    );
+    console.log('3');
+  }
  }
 
